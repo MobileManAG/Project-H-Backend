@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2015 MobileMan GmbH
+  www.mobileman.com
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"
+	elementFormDefault="qualified" targetNamespace="http://mobileman.com/projecth/schemas"
+	xmlns:projecth="http://mobileman.com/projecth/schemas">
+
+	<xs:element name="ProjectHPostRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="UserName" type="xs:string" />
+				<xs:element name="ActivationCode" type="xs:string" />
+				<xs:element name="LogDate" type="xs:decimal" />
+				<xs:element name="HAQ1" type="xs:string" />
+				<xs:element name="HAQ1Value" type="xs:string" />
+				<xs:element name="HAQ2" type="xs:string" />
+				<xs:element name="HAQ2Value" type="xs:string" />
+				<xs:element name="HAQ3" type="xs:string" />
+				<xs:element name="HAQ3Value" type="xs:string" />
+				<xs:element name="HAQ3SUB" type="xs:string" />
+				<xs:element name="HAQ3SUBValue" type="xs:string" />
+				<xs:element name="HAQ4" type="xs:string" />
+				<xs:element name="HAQ4Value" type="xs:string" />
+				<xs:element name="HAQ5" type="xs:string" />
+				<xs:element name="HAQ5Value" type="xs:string" />
+				<xs:element name="HAQ6" type="xs:string" />
+				<xs:element name="HAQ6Value" type="xs:string" />
+				<xs:element name="HAQ7" type="xs:string" />
+				<xs:element name="HAQ7Value" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ProjectHPostInitialRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="UserName" type="xs:string" />
+				<xs:element name="ActivationCode" type="xs:string" />
+				<xs:element name="Gender" type="xs:integer" />
+				<xs:element name="Birthday" type="xs:integer" />
+				<xs:element name="InitialSymptomDate" type="xs:decimal" />
+				<xs:element name="InitialDiagnosisDate" type="xs:decimal" />
+				<xs:element name="MedicineClass" type="xs:string" />
+				<xs:element name="Medicine" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="ProjectHPostResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="result" type="xs:boolean" />
+				<xs:element name="Message" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="ProjectHPostInitialResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="result" type="xs:boolean" />
+				<xs:element name="Message" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
+

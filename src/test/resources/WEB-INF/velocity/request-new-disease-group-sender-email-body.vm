@@ -1,0 +1,130 @@
+<!--
+  Copyright 2015 MobileMan GmbH
+  www.mobileman.com
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<html>
+<head>
+<style type="text/css">
+body {
+	font-family: Helvetica, Tahoma, sans-serif;
+	background-color: #eee;
+}
+
+h3 {
+    font-size:20px;
+    color: #000;
+}
+
+a {
+	color: #65b7df;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover {
+	color: #65b7df;
+	text-decoration: underline;
+}
+
+.projecthlink {
+	color: #666;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.projecthlink:hover {
+	color: #333;
+}
+
+.content {
+	font-size: 11px;
+	margin: auto;
+	background-color: #fff;
+	padding: 20px;
+	width: 60%;
+	min-width: 300px;
+	border-bottom: 1px solid #ccc;
+	white-space: pre;           /* CSS 2.0 */
+	white-space: pre-wrap;      /* CSS 2.1 */
+	white-space: pre-line;      /* CSS 3.0 */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -hp-pre-wrap;  /* HP Printers */
+	word-wrap: break-word;      /* IE 5+ */
+	word-break: normal;
+}
+
+.projecthfooter {
+	font-size:20px;
+	margin: auto;
+	padding-top: 20px;
+	width: 60%;
+	min-width: 300px;
+}
+</style>
+</head>
+<body>
+<div class="content">
+	<table>
+		<tr>
+			<td>
+				<h3>Guten Tag </h3>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Wir danken Ihnen herzlich für Ihr Anfrage um ${disease_name} dem projecth System hinzuzufügen.
+				<br />
+				Sobald wir Ihre Gesundheitsgruppe ${disease_name} zur Verfügung haben, melden wir uns umgehend wieder bei Ihnen.
+				<br />
+				<br />
+				Herzlichst,
+				<br />
+				Ihr projecth&reg; Team.  
+				<br />
+		  </td>
+		</tr>
+	</table>
+</div>
+<div class="projecthfooter">
+	<table style="color: #666; font-size: 12px;">
+		<tr>
+			<td>M&ouml;chten Sie mehr &uuml;ber projecth mobil erfahren?
+				Hier finden Sie Informationen zu <a class="projecthlink" href="http://www.projecth.de/public/projecth_mobile">projecth&reg;</a> und <a class="projecthlink" href="http://www.projecth.de/public/hpad_mobile">Hpad&reg;</a>.
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<br />projecth&reg; sch&auml;tzt Ihre Privatsph&auml;re sehr. Zu keiner Zeit wird Ihre E-Mail Adresse Drittparteien kommuniziert. Sie bestimmen, welche Information Sie mit wem teilen. projecth&reg; ist 
+				ein anonymes System. Kommunizieren Sie nie Ihren echten Namen oder eindeutig identifzierbare Informationen.
+				<br />
+				<br />
+				&copy; projecth&reg; 2011
+				&nbsp;|&nbsp;
+				<a class="projecthlink" href="http://www.projecth.de/public/datenschutz">Datenschutz</a>
+				&nbsp;|&nbsp;
+				<a class="projecthlink" href="http://www.projecth.de/public/nutzungsbedingungen">Nutzungsbedingungen</a>
+				<br/>
+				<br/>
+	Besuchen Sie uns unter <a class="projecthlink" href="http://www.projecth.de">projecth&reg; Deutschland</a>, <a class="projecthlink" href="http://www.projecth.at">projecth&reg; &Ouml;sterreich</a>, <a class="projecthlink" href="http://www.projecth.ch">projecth&reg; Schweiz</a>
+				oder <a class="projecthlink" href="http://www.projecth.com">projecth&reg; International.</a>
+			</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

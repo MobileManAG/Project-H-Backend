@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2015 MobileMan GmbH
+  www.mobileman.com
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:ws="http://www.springframework.org/schema/web-services" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/web-services 
+		http://www.springframework.org/schema/web-services/web-services-1.5.xsd
+		http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
+    
+	<!--   
+	<bean id="hibernateEntityInterceptor" 
+	         class="com.mobileman.projecth.persistence.hibernate.interceptor.HibernateEntityInterceptor">
+	         
+	</bean>
+	-->
+
+	<!-- Hibernate session factory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		
+		<property name="schemaUpdate" value="false"/>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				
+				<prop key="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.SingletonEhCacheRegionFactory</prop>
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="net.sf.ehcache.configurationResourceName">/ehcache.xml</prop>
+				<prop key="hibernate.search.default.directory_provider">filesystem</prop>
+				<prop key="hibernate.search.default.indexBase">${hibernate.search.default.indexBase}</prop>
+			</props>
+		</property>
+		
+		<property name="entityInterceptor" ref="hibernateEntityInterceptor"/>
+
+		<property name="annotatedClasses">
+			<list>
+				<value>com.mobileman.projecth.domain.system.System</value>
+				<value>com.mobileman.projecth.domain.index.country.Country</value>
+				<value>com.mobileman.projecth.domain.index.kpi.KeyPerformanceIndicatorType</value>
+				
+				<value>com.mobileman.projecth.domain.index.education.Education</value>
+				<value>com.mobileman.projecth.domain.index.family.FamilySituation</value>
+				<value>com.mobileman.projecth.domain.index.race.Race</value>
+				
+				<value>com.mobileman.projecth.domain.user.UserAccount</value>
+				<value>com.mobileman.projecth.domain.user.User</value>
+				<value>com.mobileman.projecth.domain.user.connection.UserConnection</value>
+				<value>com.mobileman.projecth.domain.user.message.Message</value>
+				<value>com.mobileman.projecth.domain.admin.Admin</value>
+				<value>com.mobileman.projecth.domain.customer.Customer</value>
+				<value>com.mobileman.projecth.domain.doctor.Doctor</value>
+				<value>com.mobileman.projecth.domain.medicine.Medication</value>
+				<value>com.mobileman.projecth.domain.disease.DiseaseGroup</value>
+				<value>com.mobileman.projecth.domain.disease.DiseaseSubgroup</value>
+				<value>com.mobileman.projecth.domain.disease.Disease</value>
+				<value>com.mobileman.projecth.domain.disease.Haq</value>
+				
+				<value>com.mobileman.projecth.domain.questionary.OneTimeHaq</value>
+				<value>com.mobileman.projecth.domain.questionary.QuestionType</value>
+				<value>com.mobileman.projecth.domain.questionary.Question</value>
+				<value>com.mobileman.projecth.domain.questionary.CustomQuestion</value>
+				<value>com.mobileman.projecth.domain.questionary.Answer</value>
+				<value>com.mobileman.projecth.domain.questionary.ScaleAnswer</value>
+				<value>com.mobileman.projecth.domain.questionary.NoAnswer</value>
+				
+				<value>com.mobileman.projecth.domain.patient.Patient</value>
+				<value>com.mobileman.projecth.domain.patient.PatientQuestionAnswer</value>
+				<value>com.mobileman.projecth.domain.patient.PatientQuestionImageAnswer</value>
+				<value>com.mobileman.projecth.domain.patient.PatientMedicineInitial</value>
+				<value>com.mobileman.projecth.domain.patient.kpi.PatientKeyPerformanceIndicator</value>
+				<value>com.mobileman.projecth.domain.patient.kpi.PatientKeyPerformanceIndicatorValidation</value>
+				<value>com.mobileman.projecth.domain.patient.medication.PatientMedication</value>
+				
+				<value>com.mobileman.projecth.domain.chart.ChartType</value>
+				<value>com.mobileman.projecth.domain.chart.HaqChart</value>
+			</list>
+		</property>
+
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+</beans>

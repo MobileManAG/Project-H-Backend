@@ -1,0 +1,42 @@
+<!--
+  Copyright 2015 MobileMan GmbH
+  www.mobileman.com
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+    version="1.0">
+    <persistence-unit name="projecth" transaction-type="RESOURCE_LOCAL">
+        <properties>
+        	<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.jdbc.batch_size" value="100" />
+			<property name="hibernate.hbm2ddl.auto" value="${hbm2ddl}" />
+			<property name="hibernate.generate_statistics" value="true" />
+							
+            <!-- 2nd level cache  -->
+            <property name="hibernate.cache.provider_class" value="net.sf.ehcache.hibernate.SingletonEhCacheProvider" />
+            <property name="hibernate.cache.provider_configuration" value="/ehcache.xml" />
+            <property name="hibernate.cache.use_second_level_cache" value="true" />
+            <property name="hibernate.cache.use_query_cache" value="true" />            
+            <property name="hibernate.cache.use_structured_entries" value="true" />
+			
+            <!--  HSearch settings -->
+            <property name="hibernate.search.default.indexBase" value="${hibernateIndexDir}" />
+            <property name="hibernate.search.default.directory_provider" value="${hibernateDirectoryProvider}" />
+        </properties>
+    </persistence-unit>
+</persistence>

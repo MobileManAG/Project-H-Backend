@@ -1,0 +1,71 @@
+<!--
+  Copyright 2015 MobileMan GmbH
+  www.mobileman.com
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+    http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<html>
+<body>
+<table width="800px" >
+	<tr>
+    <td><h3>Hallo ${sender.userAccount.login}</h3></td>
+</tr>
+<div>
+<tr>
+  <td bgcolor="#e8ebec">&nbsp;</td>
+  </tr>
+<tr>
+	You have sent message to ${receiver.userAccount.login}.
+	
+	<br/> <br/> 
+	Wir machen Sie darauf aufmerksam, dass Sie keine eindeutig identifzierbare Informationen bei Ihrer Kommunikation verwenden sollten, damit das System anonym bleibt. <br/>
+	<br/>
+	Bei Fragen oder Problemen, wenden Sie sich bitte an unseren Kundendienst unter support@projecth.de, support@projecth.at oder support@projecth.ch. 
+	<br/>
+	Herzlichst, <br/>
+	Ihr projecth Team   
+      <br/>	
+	  <br/>
+</tr>
+<tr>
+  <td bgcolor="#e8ebec">&nbsp;</td>
+  </tr>
+<tr>
+<td align="left" style="font-size: 9pt; color: #a=888888">M&ouml;chten Sie mehr &uuml;ber projecth mobil erfahren?
+Hier finden Sie Informationen zu <a href="http://www.projecth.de/public/projecth_mobile">projecth&reg;</a> und <a href="http://www.projecth.de/public/hpad_mobile">Hpad&reg;</a>.</td>
+</tr>
+<tr>
+  <td bgcolor="#e8ebec">&nbsp;</td>
+</tr>
+<tr><td align="center" valign="middle" style="font-size: 8pt; color: #a=aaaaa">
+projecth sch&auml;tzt Ihre Privatsph&auml;re sehr. Zu keiner Zeit wird Ihre E-Mail Adresse Drittparteien kommuniziert. Sie bestimmen, welche Information Sie mit wem teilen. projecth ist 
+ein anonymes System. Kommunizieren nie Ihren echten Namen oder eindeutig identifzierbare Informationen.<br>
+<br />
+&copy; projecth&reg; 2011
+&nbsp;|&nbsp;
+<a href="http://www.projecth.de/public/datenschutz" style="color: #aaaaaa;">Datenschutz</a>
+&nbsp;|&nbsp;
+<a href="http://www.projecth.de/public/nutzungsbedingungen" style="color: #aaaaaa;">Nutzungsbedingungen</a>
+<br><br>
+Besuchen Sie uns unter <a href="http://www.projecth.de" style="color: #aaaaaa;">projecth Deutschland</a>,&nbsp;
+<a href="http://www.projecth.at" style="color: #aaaaaa;">projecth &Ouml;sterreich</a>,&nbsp;
+<a href="http://www.projecth.ch" style="color: #aaaaaa;">projecth Schweiz</a>
+&nbsp;oder&nbsp;
+<a href="http://www.projecth.com" style="color: #aaaaaa;">projecth International</a>
+</td></tr>
+		           		
+</div>
+</table>
+</body>
+</html>

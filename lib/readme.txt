@@ -1,0 +1,1 @@
+mvn install:install-file -DgroupId=org.slf4j -DartifactId=slf4j-api -Dversion=1.6.1 -Dpackaging=jar -Dfile=d:\slf4j-api-1.6.1.jar
